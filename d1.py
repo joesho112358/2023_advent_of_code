@@ -12,8 +12,12 @@ with open("input.txt", "r+") as file1262:
         if len(all_values_which_are_determined_to_be_digits) == 1 :
             all_the_things.append(all_values_which_are_determined_to_be_digits[0] * 11)
         else:
-            temporaryThingToStoreIntoTheVariableAll = int(str(all_values_which_are_determined_to_be_digits[0]) +  str(all_values_which_are_determined_to_be_digits[-1]))
-            all_the_things.append(temporaryThingToStoreIntoTheVariableAll)
+            if len(all_values_which_are_determined_to_be_digits) != 1 :
+                temporaryThingToStoreIntoTheVariableAll = str(
+                           int(str(all_values_which_are_determined_to_be_digits[0]) +
+                       str(all_values_which_are_determined_to_be_digits[-1]))
+                                                 )
+                all_the_things.append(temporaryThingToStoreIntoTheVariableAll)
 
 countOfThings = 0
 for number_as_a_part_of_all in all:
