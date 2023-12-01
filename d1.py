@@ -12,17 +12,8 @@ with open("input.txt", "r+") as file1:
             x = int(str(values[0]) +  str(values[-1]))
             all.append(x)
 
-cout = 0
+count = 0
 for num in all:
-    cout += num
-print(cout)
+    count += num
+print(count)
 
-
-
-echo "# 2023_advent_of_code" >> README.md
-  git init
-  git add README.md
-  git commit -m "first commit"
-  git branch -M main
-  
-  git push -u origin main
