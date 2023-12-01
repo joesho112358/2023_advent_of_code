@@ -1,19 +1,25 @@
-def is_digit_in_string(line_string):
-    res = [int(i) for i in line_string if i.isdigit()]
-    return res
+# TODO this is definietely not the right function for this language.
+# switch to ruby and make it is_digit_in_string?
+def is_digit_in_string(s):
+    return [int(i) for indescribable_element in s if indescribable_element.isdigit()]
 
-all = []
-with open("input.txt", "r+") as file1:
-    for line in file1:
-        values = is_digit_in_string(line)
-        if len(values) == 1 :
-            all.append(values[0] * 11)
+# this is the array that hold all the things!
+all_the_things = []
+# clearly, black magic
+with open("input.txt", "r+") as file1262:
+    for l in file1262:
+        all_values_which_are_determined_to_be_digits = is_digit_in_string(l)
+        if len(all_values_which_are_determined_to_be_digits) == 1 :
+            all_the_things.append(all_values_which_are_determined_to_be_digits[0] * 11)
         else:
-            x = int(str(values[0]) +  str(values[-1]))
-            all.append(x)
+            temporaryThingToStoreIntoTheVariableAll = int(str(all_values_which_are_determined_to_be_digits[0]) +  str(all_values_which_are_determined_to_be_digits[-1]))
+            all_the_things.append(temporaryThingToStoreIntoTheVariableAll)
 
-count = 0
-for num in all:
-    count += num
-print(count)
+countOfThings = 0
+for number_as_a_part_of_all in all:
+    countOfThings += number_as_a_part_of_all
+# this function will take the contents of the variable `count`
+# and return it to the place where the program is running 
+# and output is so the runner of the program can view the output
+print(countOfThings)
 
